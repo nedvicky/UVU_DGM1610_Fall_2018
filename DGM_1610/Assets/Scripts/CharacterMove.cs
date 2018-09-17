@@ -8,20 +8,20 @@ public class CharacterMove : MonoBehaviour {
 	public float JumpHeight;
 
 	// player grounded variables
-    //access modifiers, 
+    //access modifiers, (GUI layouts), defining the variable, variable;
 	public Transform GroundCheck; //position, rotation and scale of obj.
 	public float GroundCheckRadius;
-	public LayerMask WhatIsGround;
-	private bool Grounded;
+	public LayerMask WhatIsGround; //allow you to display the LayerMask popup menu in the inspector
+    private bool Grounded;
 
 	// Use this for initialization
-	void Start ()
+	void Start () //void means no data is returned (no repeat) also it is a type not a function (argument) 
     {
 	
 	}
 	
 
-	void FixedUpdate ()
+	void FixedUpdate () //this can be used to validate different types of arguments
     {
 		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
 	}
