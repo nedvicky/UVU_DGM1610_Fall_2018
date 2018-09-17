@@ -30,11 +30,11 @@ public class CharacterMove : MonoBehaviour {
 	void Update ()
     {
 		// this makes the your character jump
-		if(Input.GetKeyDown (KeyCode.Space)&& Grounded)
+		if(Input.GetKeyDown (KeyCode.Space)&& Grounded) //event
         {
 			Jump();
 		}
-		// this moves character side to side with A and D ;)
+		// this will moves character side to side with A and D ;)
 		if(Input.GetKey (KeyCode.D))
         {
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);	
