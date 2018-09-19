@@ -6,6 +6,7 @@ public class CharacterMove : MonoBehaviour {
 	// player movement variables
 	public int MoveSpeed;
 	public float JumpHeight;
+    private bool DoubleJump;
 
 	// player grounded variables
     //access modifiers, (GUI layouts), defining the variable, variable;
@@ -13,6 +14,9 @@ public class CharacterMove : MonoBehaviour {
 	public float GroundCheckRadius;
 	public LayerMask WhatIsGround; //allow you to display the LayerMask popup menu in the inspector
     private bool Grounded;
+
+    //non-stick player
+    private float MoveVelocity;
 
 	// Use this for initialization
 	void Start () //void means no data is returned (no repeat) also it is a type not a function (argument) 
@@ -34,6 +38,17 @@ public class CharacterMove : MonoBehaviour {
         {
 			Jump();
 		}
+        //double jump here
+        if (Grounded)
+            DoubleJump = false;
+        if(Input.GetKeyDown (KeyCode.Space)&& !DoubleJump && !Grounded) //! means false - && logical operator
+        {
+            Jump();
+            DoubleJump = true; //to make sure the player doesnt jump again
+        }
+        //non-stick player
+        MoveVelocity = 0f;
+
 		// this will moves character side to side with A and D ;)
 		if(Input.GetKey (KeyCode.D))
         {
