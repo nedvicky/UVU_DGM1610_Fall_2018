@@ -52,14 +52,18 @@ public class CharacterMove : MonoBehaviour {
 		// this will moves character side to side with A and D ;)
 		if(Input.GetKey (KeyCode.D))
         {
-			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);	
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);	
+            MoveVelocity = MoveSpeed;
 		}
 		if(Input.GetKey (KeyCode.A))
         {
-			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            MoveVelocity = -MoveSpeed;
 		}
 
-	}
+        GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
+    }
 
 	public void Jump()
     {
