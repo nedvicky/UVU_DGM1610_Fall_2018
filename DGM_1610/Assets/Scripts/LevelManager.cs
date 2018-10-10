@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
     public GameObject CurrentCheckPoint;
-    private Rigidbody2D Player;
+    public Rigidbody2D Player;
     //these are all declarations
     //declaring particles
     public GameObject DeathParticles;
@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
     // Use this for initialization
 	void Start ()
     {
-        Player = FindObjectOfType<Rigidbody2D>();
+        //Player = FindObjectOfType<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
