@@ -4,8 +4,29 @@ using UnityEngine;
 
 public class Inheritance : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    class Animal
+    {
+        public Animal()
+        {
+            print("Animal constructor");
+        }
+        public void Greet()
+        {
+            print("Animal says Hello");
+        }
+        public void Talk()
+        {
+            print("Animal talk");
+        }
+        public virtual void Sing()
+        {
+            print("Animal song");
+        }
+    };
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
