@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Enemy")
         {
