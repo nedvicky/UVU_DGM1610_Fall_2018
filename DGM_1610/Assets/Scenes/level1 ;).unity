@@ -5244,9 +5244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 500
-  Protagonist: {fileID: 0}
-  EnemyDeath: {fileID: 0}
-  ProjectileParticle: {fileID: 0}
+  Protagonist: {fileID: 2129131984}
+  EnemyDeath: {fileID: 1976507476}
+  ProjectileParticle: {fileID: 18361786}
   PointsForKill: 0
 --- !u!1001 &796080883
 Prefab:
@@ -5945,7 +5945,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.15}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!61 &1976507480
 BoxCollider2D:
@@ -6044,7 +6044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f733e8c22e211b548892a13671eed688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 2129131987}
+  LevelManager: {fileID: 0}
 --- !u!1 &2014742616
 GameObject:
   m_ObjectHideFlags: 0
