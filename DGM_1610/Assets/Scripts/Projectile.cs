@@ -18,6 +18,8 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        Protagonist = GameObject.Find("Protagonist").GetComponent<Rigidbody2D>();
+
         if (Protagonist.transform.localScale.x < 0)
             Speed = -Speed;
 
