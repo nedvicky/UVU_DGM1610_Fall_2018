@@ -13,6 +13,8 @@ public class Projectile : MonoBehaviour {
 
     public int PointsForKill;
 
+    public float ProjectileLife; //decimals
+
 
 
 	// Use this for initialization
@@ -22,6 +24,9 @@ public class Projectile : MonoBehaviour {
 
         if (Protagonist.transform.localScale.x < 0)
             Speed = -Speed;
+
+        StartCoroutine(ProjectileLifeSpan());
+
 
         // Speed = Speed * Mathf.Sign(Protagonist.transform.localScale.x);
 
@@ -46,5 +51,13 @@ public class Projectile : MonoBehaviour {
         Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy (gameObject);
     }
+
+    //projectile life-span
+    IEnumerator ProjectileLifeSpan()
+    {
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(gameObject);
+    }
+
 
 }

@@ -91,9 +91,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 500
   Protagonist: {fileID: 0}
-  EnemyDeath: {fileID: 0}
-  ProjectileParticle: {fileID: 0}
+  EnemyDeath: {fileID: 1063892186452226, guid: 1cd1510e7c4cd6b4d87c812dd8af211a, type: 2}
+  ProjectileParticle: {fileID: 1375105663928464, guid: 6f8899b9344f5e6499c5a070bd4905d8,
+    type: 2}
   PointsForKill: 0
+  ProjectileLife: 1
 --- !u!212 &212754986286323420
 SpriteRenderer:
   m_ObjectHideFlags: 1
