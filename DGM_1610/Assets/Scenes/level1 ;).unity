@@ -155,11 +155,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4966349589009224, guid: 90230ab301c418d4c9bf05fc0ff47dd1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -912
+      value: -899
       objectReference: {fileID: 0}
     - target: {fileID: 4966349589009224, guid: 90230ab301c418d4c9bf05fc0ff47dd1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 69
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 4966349589009224, guid: 90230ab301c418d4c9bf05fc0ff47dd1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -320,11 +320,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4877790307680148, guid: 548098fd7c4b5c64c8b37b3823007eb2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -223
+      value: -240
       objectReference: {fileID: 0}
     - target: {fileID: 4877790307680148, guid: 548098fd7c4b5c64c8b37b3823007eb2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 87
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4877790307680148, guid: 548098fd7c4b5c64c8b37b3823007eb2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1230,6 +1230,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Milk: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Jedi:
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!4 &1777646454
 Transform:
   m_ObjectHideFlags: 0
