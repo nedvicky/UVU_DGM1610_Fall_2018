@@ -9,6 +9,8 @@ public class Arrays : MonoBehaviour {
 
     public string[] Jedi;
 
+    public string[] Pets;
+
 
     // Use this for initialization - 
     void Start ()
@@ -43,6 +45,22 @@ public class Arrays : MonoBehaviour {
         foreach(string item in Jedi) //safest loop to use because it only goes to the total length of the array
         {
             print("Jedi name is " + item);
+        }
+
+
+        Pets = new string[6];
+
+
+        Pets[0] = "Dog";
+        Pets[1] = "Cat";
+        Pets[2] = "Turantula";
+        Pets[3] = "Blue Jay";
+        Pets[4] = "Kinkajou";
+        Pets[5] = "Rat";
+
+        foreach(string item in Pets)
+        {
+            print("The pet is a " + item);
         }
 
     }
