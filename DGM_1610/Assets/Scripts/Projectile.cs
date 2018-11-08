@@ -48,8 +48,14 @@ public class Projectile : MonoBehaviour {
             ScoreManager.AddPoints (PointsForKill);
         }
 
-        Instantiate(ProjectileParticle, transform.position, transform.rotation);
+        //Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy (gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Instantiate(ProjectileParticle, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
     //projectile life-span

@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour {
 
     public GameObject CurrentCheckPoint;
     public Rigidbody2D Player;
+
+    public GameObject Player2;
     //these are all declarations
     //declaring particles
     public GameObject DeathParticles;
@@ -42,6 +44,7 @@ public class LevelManager : MonoBehaviour {
         Instantiate(DeathParticles, Player.transform.transform.position, Player.transform.rotation);
         //hide player after death
         //Player.enabled = false;
+        Player2.SetActive(false);
         Player.GetComponent<Renderer>().enabled = false;
         //gravity reset (for when player died and is hiding)
         GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
@@ -59,6 +62,7 @@ public class LevelManager : MonoBehaviour {
         Player.transform.position = CurrentCheckPoint.transform.position;
         //Show Player
         //Player.enabled = true;
+        Player2.SetActive(true);
         Player.GetComponent<Renderer>().enabled = true;
         //Spawn Player
         Instantiate(RespawnParticles, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
