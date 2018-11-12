@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     public float Speed;
-    public Rigidbody2D Protagonist;
+    public GameObject Protagonist;
 
     public GameObject EnemyDeath;
 
@@ -13,20 +13,26 @@ public class Projectile : MonoBehaviour {
 
     public int PointsForKill;
 
-    public float ProjectileLife; //decimals
+    //public float ProjectileLife; //decimals
 
+    public int TimeOut;
 
 
 	// Use this for initialization
 	void Start ()
     {
-        Protagonist = GameObject.Find("Protagonist").GetComponent<Rigidbody2D>();
+        Protagonist = GameObject.Find("Protagonist");//.GetComponent<Rigidbody2D>(); 
+
+        EnemyDeath = Resources.Load("Prefab/Enemy Death Particle") as GameObject;
+
+        ProjectileParticle = Resources.Load("Prefab/Projectile Particle") as GameObject;
 
         if (Protagonist.transform.localScale.x < 0)
             Speed = -Speed;
 
-        StartCoroutine(ProjectileLifeSpan());
+        //StartCoroutine(ProjectileLifeSpan());
 
+        Destroy(gameObject, TimeOut);
 
         // Speed = Speed * Mathf.Sign(Protagonist.transform.localScale.x);
 
@@ -52,18 +58,18 @@ public class Projectile : MonoBehaviour {
         Destroy (gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         Instantiate(ProjectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
     //projectile life-span
-    IEnumerator ProjectileLifeSpan()
-    {
-        yield return new WaitForSeconds(ProjectileLife);
-        Destroy(gameObject);
-    }
+    //IEnumerator ProjectileLifeSpan()
+    //{
+        //yield return new WaitForSeconds(ProjectileLife);
+        //Destroy(gameObject);
+    //}
 
 
 }
