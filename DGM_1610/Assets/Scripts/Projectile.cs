@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour {
     {
         Protagonist = GameObject.Find("Protagonist");//.GetComponent<Rigidbody2D>(); 
 
-        EnemyDeath = Resources.Load("Prefab/Enemy Death Particle") as GameObject;
+        EnemyDeath = Resources.Load("Prefab/Enemy Death Particle") as GameObject; //declaration of file
 
         ProjectileParticle = Resources.Load("Prefab/Projectile Particle") as GameObject;
 
